@@ -17,12 +17,14 @@ FROM sales;
    2. Monthly Revenue Trend
    ----------------------------------------------------- */
 
+
 SELECT 
-    DATE_FORMAT(sale_date, '%Y-%m') AS month,
+    YEAR(sale_date) AS year,
+    MONTH(sale_date) AS month,
     SUM(revenue) AS monthly_revenue
 FROM sales
-GROUP BY month
-ORDER BY month;
+GROUP BY YEAR(sale_date), MONTH(sale_date)
+ORDER BY year, month;
 
 
 /* -----------------------------------------------------
