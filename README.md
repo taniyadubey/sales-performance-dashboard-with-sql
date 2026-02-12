@@ -71,6 +71,7 @@ Measures customer retention strength.
 ---
 
 ## 🛠️ How to Run This Project
+online: https://sqliteonline.com/
 
 1. Create database in MySQL / PostgreSQL.
 2. Run `schema.sql`
